@@ -1,0 +1,102 @@
+$phone: 780px;
+body {
+  height: 100vh;
+  overflow-y: hidden;
+  user-select: text;
+}
+img {
+  pointer-events: none;
+}
+.ellipsis-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  white-space: normal;
+}
+.css-1ytufz-MuiAvatarGroup-root .MuiAvatar-root {
+  transition: all 0.225s ease-in-out;
+}
+
+.mapboxgl-ctrl.mapboxgl-ctrl-attrib {
+  display: none;
+}
+
+.mapboxgl-ctrl-bottom-left {
+  display: none;
+}
+.mapboxgl-popup-content {
+  height: auto;
+  box-shadow: 0px 3px 3px -2px rgba(0, 0, 0, 0.2),
+    0px 3px 4px 0px rgba(0, 0, 0, 0.14), 0px 1px 8px 0px rgba(0, 0, 0, 0.12);
+}
+.PopupStlyes {
+  width: 175px;
+  max-height: 200px;
+  overflow-y: scroll;
+  .mapboxgl-popup-content {
+    padding: 15px 5px;
+  }
+  .singlePopupContainer.containerImages {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+  }
+  .containerImages {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    .itemImages {
+      overflow: hidden;
+      border: 1px solid white;
+      object-fit: contain;
+      width: 50px;
+      height: 50px;
+      border-radius: 10%;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}
+.containerImgCLuster {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.imgeMarker {
+  object-fit: contain;
+  width: 45px;
+  height: 45px;
+  border-radius: 10%;
+  visibility: hidden; /* Initially hide the image */
+}
+
+.imgeMarker.loaded {
+  visibility: visible; /* Show the image when it's loaded */
+}
+.imgeMarker.clusterGroup {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.SingleMarkerContainer {
+  cursor: pointer;
+}
+
+@media screen and (max-width: $phone) {
+  .MuiBox-root.css-up2dfr {
+    width: 97% !important;
+  }
+  #auto-complete-search-bar {
+    width: "97% !important";
+    right: "auto";
+    left: "auto";
+  }
+  .MuiAutocomplete-root.MuiAutocomplete-hasPopupIcon.css-1pfgy4j {
+    width: 100% !important;
+  }
+  .MuiAutocomplete-root.MuiAutocomplete-hasPopupIcon.css-1wuilmg-MuiAutocomplete-root {
+    width: 100% !important;
+  }
+}
